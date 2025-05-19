@@ -78,9 +78,6 @@
 
     </header>
 
-
-
-
     <div class="site-section cta-big-image border-bottom" id="about-section">
       <div class="container" style="padding-top: 30px">
         <div class="row">
@@ -94,12 +91,11 @@
               <p>
                A little about me! </p>
                <p>
-                I am a 29-year-old originally from El Salvador, the smallest country in Central America. At the age of 23, I relocated to New York and, in 2020 at 25, enlisted in the U.S. Army, where I continue to serve. I am also the proud owner of a cat named Lucy. In my free time, I enjoy hiking and kayaking. Currently, I am pursuing a degree in Computer Science at USD, I plan to focus in cybersecurity. I invite you to review some of the projects I have completed. 
+                I am a 29-year-old originally from El Salvador, the smallest country in Central America. At the age of 23, I relocated to New York and, in 2020 at 25, enlisted in the U.S. Army, where I continue to serve. I am also the proud owner of a cat named Lucy. In my free time, I enjoy hiking and kayaking.
+                 Currently, I am pursuing a degree in Computer Science at USD, I plan to focus in cybersecurity. I invite you to review some of the projects I have completed.
               </p>
           
             </div>
-
-            
 
           </div>
         </div>
@@ -117,13 +113,13 @@
         </div>
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-          
+
             <img src="UMLBIrthdayParadox .png" alt="Image of your project" class="img-fluid">
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3>Birthday Paradox project</h3>
+              <h1>Birthday Paradox project</h1>
             </p>
               <p>
                 This project is all about illustrating the famous “birthday paradox. How likely it is that a group of people will share the same birthday. 
@@ -143,11 +139,81 @@
               </p> 
                 Overall, this project was both enjoyable and educational, helping me sharpen my Java coding skills and solidifying the value of collaboration in producing robust, well-tested software.
               </p>
+              </p>
+              </p>
+            </div>
+          </div>
 
+
+
+          <div class="row">
+                <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+                  <img src="coredesing1.jpg" alt="Image of your project" class="img-fluid">
+                  <img src="Picture2.png" alt="Second project image" class="img-fluid">
+                  <img src="Picture3.png" alt="Third project image" class="img-fluid">
+                  <img src="Picture4.png" alt="fourth project image" class="img-fluid">
+                  <img src="Picture3.png" alt="fifth project image" class="img-fluid">
+
+                </div>
+
+            <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                  <div class="mb-4">
+
+                <h1> Java Card Game Simulator</h1>
+                    <div class="mb-4">
+
+
+                    <p>The <strong>Java Card Game Simulator</strong> is a modular, extensible, and fully object-oriented console application built to simulate card games using clean software design practices. The system is designed with flexibility in mind, supporting multiple games through abstraction, delegation, and polymorphism all of which follow <strong>OOP</strong> and <strong>SOLID principles</strong>.
+                  The project was developed in Java and tested using <strong>JUnit 5</strong> and <strong>Mockito</strong>, fol...
+
+                <h3> What the Code Does</h3>
+                <p>At its core, the simulator allows users to play card games in the terminal. It currently supports <strong>Go Fish (Human vs AI)</strong> and includes placeholders for future expansions like <strong>Blackjack</strong> and <strong>Rummy</strong>. The application handles deck creation, shuffling, drawing, tracking drawn cards, managing players' hands, enforcing game rules, and printing game outcomes — all while remaining fully decoupled and extensible.</p>
+
+                <p>The game begins via the Simulator> class, which accepts a game name ("gofish") as a command-line argument. It then initializes:</p>
+                <ul>
+                  <li>A shuffled deck via StandardDeckFactory</li>
+                  <li>One human and one AI player (each as a Participants object)</li>
+                  <li>A DeckTracker to monitor drawn cards</li>
+                  <li>A game-specific behavior strategy (GoFishGameBehavior)</li>
+                  <li>And runs the game loop using the CardGame engine</li>
+                </ul>
+
+                <h3> Architectural Structure</h3>
+
+                      <p>The system follows several well-known design patterns:</p>
+                <ul>
+                  <li> <strong>Strategy Pattern</strong>: Used to encapsulate different game rules (GameBehaviors) and player strategies (PlayerBehaviors) like AI vs Human</li>
+                  <li> <strong>Factory Pattern</strong>: Used to encapsulate deck creation logic (DeckFactory, StandardDeckFactory)</li>
+                  <li> <strong>Interface Segregation</strong>: All game elements (cards, players, games, decks) are abstracted via interfaces to maximize modularity</li>
+                  <li> <strong>Single Responsibility</strong>: Each class has a clearly defined role, e.g. Participants only manages player hands</li>
+                  <li> <strong>Open/Closed Principle</strong>: New games can be added without modifying the existing engine — only by injecting new behavior implementations</li>
+                </ul>
+
+                <h3>Project </h3>
+
+                <ul>
+                  <li><strong>DeckOfCards</strong> class supports generic playing card management: draw, shuffle, check size</li>
+                  <li><strong>Participants</strong> hold their own hand and delegate behavior to injected PlayerBehaviors</li>
+                  <li><strong>DeckTracker</strong> tracks which cards have been drawn</li>
+                  <li><Strong>GoFishGameBehavior</Strong> manages game setup and determines a winner</li>
+                  <li><strong>GoFishPlayerBehavior</strong> implements AI decision-making</li>
+                  <li><strong>GoFishHumanPlayerBehavior</strong> prompts the user for input to simulate a human turn</li>
+                  <li><strong>Mockito</strong> is used in all unit test files to isolate behaviors and validate logic flow independently</li>
+                </ul>
+
+                <h3> My Contributions</h3>
+                <p>I worked specifically on the following key components of the project:</p>
+                <ul>
+                  <li><strong>DeckTracker / StandardDeckTracker:</strong> I designed and implemented the system for tracking all drawn cards from the deck.</li>
+                  <li><strong>Go Fish Game Logic:</strong> I implemented both GoFishGameBehavior and GoFishPlayerBehavior, handling turn flow, AI card requests, drawing, and book detection.</li>
+                </ul>
+                <p>I also contributed to writing unit tests using <strong>Mockito</strong>, ensuring that each game behavior could be tested in isolation.</p>
+                </ul>
+                </body>
 
             </div>
 
-            
+
 
           </div>
         </div>
